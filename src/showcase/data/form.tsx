@@ -1,13 +1,9 @@
-import type { ComponentInfo, CategoryInfo } from '../types';
+import type { ComponentInfo } from '../types';
 import { Button } from '../../components/common/Button';
 import { Input } from '../../components/common/Input';
-import { Title } from '../../components/common/Title';
 import { useState } from 'react';
 
-/**
- * 全コンポーネントのデータ
- */
-export const componentsData: ComponentInfo[] = [
+export const formComponents: ComponentInfo[] = [
   {
     id: 'button',
     name: 'Button',
@@ -67,47 +63,5 @@ export const componentsData: ComponentInfo[] = [
       'カスタムスタイル対応',
     ],
     difficulty: 2,
-  },
-  {
-    id: 'title',
-    name: 'Title',
-    description: 'ページやセクションのタイトルを表示するシンプルなコンポーネント。',
-    category: 'display',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
-    demoComponent: () => <Title title="サンプルタイトル" />,
-    codeSnippet: `<Title title="ページタイトル" />`,
-    features: [
-      '一貫したタイトルスタイリング',
-      'レスポンシブ対応',
-      'シンプルで再利用可能',
-    ],
-    difficulty: 1,
-  },
-];
-
-/**
- * カテゴリ情報
- */
-export const categoriesData: CategoryInfo[] = [
-  {
-    id: 'form',
-    name: 'フォーム',
-    description: '入力フィールドやボタンなど、ユーザー入力に関するコンポーネント',
-    icon: '📝',
-    color: 'blue',
-  },
-  {
-    id: 'display',
-    name: '表示',
-    description: 'テキストやタイトルなど、情報を表示するためのコンポーネント',
-    icon: '📄',
-    color: 'green',
-  },
-  {
-    id: 'interactive',
-    name: 'インタラクティブ',
-    description: 'ユーザー操作に応じて動的に変化するコンポーネント',
-    icon: '⚡',
-    color: 'purple',
   },
 ];

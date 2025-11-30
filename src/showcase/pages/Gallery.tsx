@@ -1,8 +1,10 @@
-import { useState } from 'react';
-import { componentsData, categoriesData } from '../data/components';
-import { ComponentCard } from '../components/ComponentCard';
+import { Link } from 'react-router-dom';
+import { componentsData, categoriesData } from '../data';
+import { ComponentCard } from '../components/ComponentCard/index';
 import type { ComponentCategory } from '../types';
 import { motion } from 'framer-motion';
+import { Home } from 'lucide-react';
+import { useState } from 'react';
 
 /**
  * コンポーネント一覧ページ
@@ -28,7 +30,17 @@ export const Gallery = () => {
       {/* Header */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-gray-900">Component Gallery</h1>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/"
+              className="text-gray-500 hover:text-gray-900 transition-colors flex items-center gap-2 text-sm font-medium group"
+            >
+              <Home className="w-4 h-4 transition-transform group-hover:scale-110" />
+              Home
+            </Link>
+            <div className="h-6 w-px bg-gray-200" />
+            <h1 className="text-xl font-bold text-gray-900">Component Gallery</h1>
+          </div>
           <div className="flex gap-4 text-sm text-gray-500">
             {stats.map((stat) => (
               <div key={stat.label} className="flex gap-2 items-center">
@@ -46,8 +58,8 @@ export const Gallery = () => {
           <button
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === 'all'
-                ? 'bg-gray-900 text-white shadow-lg scale-105'
-                : 'bg-white text-gray-600 hover:bg-gray-100'
+              ? 'bg-gray-900 text-white shadow-md'
+              : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
               }`}
           >
             All
@@ -56,12 +68,11 @@ export const Gallery = () => {
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${selectedCategory === category.id
-                  ? 'bg-white text-gray-900 shadow-lg scale-105 ring-2 ring-gray-900'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === category.id
+                ? 'bg-gray-900 text-white shadow-md'
+                : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
                 }`}
             >
-              <span>{category.icon}</span>
               {category.name}
             </button>
           ))}
