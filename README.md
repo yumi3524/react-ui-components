@@ -5,16 +5,8 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?logo=tailwindcss)
 ![Storybook](https://img.shields.io/badge/Storybook-10.1-FF4785?logo=storybook)
 
-モダンなReactコンポーネントライブラリ。TypeScript、Tailwind CSS、Storybookで構築された、再利用可能なUIコンポーネント集です。
+Reactコンポーネントライブラリ。TypeScript、Tailwind CSS、Storybookで構築された、再利用可能なUIコンポーネント集です。
 
-## ✨ 特徴
-
-- 🎨 **美しいデザイン** - Tailwind CSSによるモダンなスタイリング
-- 📚 **Storybookドキュメント** - インタラクティブなコンポーネントカタログ
-- 💻 **ライブデモ** - 各コンポーネントを実際に操作可能
-- 📱 **レスポンシブ** - モバイル・タブレット・デスクトップ対応
-- ♿ **アクセシビリティ** - WAI-ARIA準拠
-- 🔧 **TypeScript** - 完全な型安全性
 
 ## 🚀 セットアップ
 
@@ -40,51 +32,6 @@ npm run storybook
 
 ブラウザで `http://localhost:6006` を開きます。
 
-## 📦 含まれるコンポーネント
-
-### フォームコンポーネント
-
-#### Button
-汎用的なボタンコンポーネント。
-
-```tsx
-<Button onClick={() => alert('Clicked!')}>
-  クリック
-</Button>
-```
-
-**主要機能:**
-- クリックイベント処理
-- disabled状態のサポート
-- カスタムスタイル対応
-
-#### Input
-多機能な入力フィールドコンポーネント。
-
-```tsx
-const [value, setValue] = useState('');
-
-<Input
-  value={value}
-  onChange={(e) => setValue(e.target.value)}
-  placeholder="入力してください"
-/>
-```
-
-**主要機能:**
-- 複数のinputタイプサポート（text, email, password等）
-- フォーカス管理
-- 最大文字数制限
-- アクセシビリティ対応
-
-### 表示コンポーネント
-
-#### Title
-ページやセクションのタイトルを表示。
-
-```tsx
-<Title title="ページタイトル" />
-```
 
 ## 🛠️ 技術スタック
 
@@ -101,12 +48,12 @@ const [value, setValue] = useState('');
 
 ### コンポーネントショーケース
 
-プロジェクトには、コンポーネントを視覚的に確認できるショーケースサイトが含まれています。
+コンポーネントを視覚的に確認できるように、コンポーネントギャラリーを提供します。
 
 - `/` - ライブラリホーム
 - `/showcase` - コンポーネントギャラリー
 
-各コンポーネントのライブデモ、コード例、主要機能を確認できます。
+各コンポーネントのコード例、主要機能を確認できます。
 
 ### Storybook
 
