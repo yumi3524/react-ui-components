@@ -21,8 +21,10 @@ export interface ComponentInfo {
   tags: string[];
   /** デモコンポーネント */
   demoComponent: () => ReactNode;
-  /** コードスニペット */
+  /** 使用例のコードスニペット */
   codeSnippet: string;
+  /** コンポーネントの実装コード */
+  implementationCode: string;
   /** 主要機能のリスト */
   features: string[];
   /** 難易度（1-5） */

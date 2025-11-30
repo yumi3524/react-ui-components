@@ -1,7 +1,14 @@
-import type { ComponentInfo } from '../types';
-import { Button } from '../../components/common/Button';
-import { Input } from '../../components/common/Input';
+import type { ComponentInfo } from '../../types';
+import { Button } from '../../../components/common/Button';
+import { Input } from '../../../components/common/Input';
 import { useState } from 'react';
+
+// コンポーネントの実装コードを raw import で取得
+import ButtonSource from '../../../components/common/Button.tsx?raw';
+import InputSource from '../../../components/common/Input.tsx?raw';
+
+// 使用例のコードスニペットをインポート
+import { ButtonSnippet, InputSnippet } from '../snippets';
 
 export const formComponents: ComponentInfo[] = [
   {
@@ -18,9 +25,8 @@ export const formComponents: ComponentInfo[] = [
         </Button>
       </div>
     ),
-    codeSnippet: `<Button onClick={() => alert('Hello!')}>
-  クリック
-</Button>`,
+    codeSnippet: ButtonSnippet,
+    implementationCode: ButtonSource,
     features: [
       'クリックイベント処理',
       'disabled状態のサポート',
@@ -48,13 +54,8 @@ export const formComponents: ComponentInfo[] = [
         </div>
       );
     },
-    codeSnippet: `const [value, setValue] = useState('');
-
-<Input
-  value={value}
-  onChange={(e) => setValue(e.target.value)}
-  placeholder="入力してください"
-/>`,
+    codeSnippet: InputSnippet,
+    implementationCode: InputSource,
     features: [
       '複数のinputタイプサポート（text, email, password等）',
       'フォーカス管理',

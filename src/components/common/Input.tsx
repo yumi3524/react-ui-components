@@ -1,18 +1,6 @@
 
-
 /**
- * 共通Inputコンポーネント
- * 
- * @example
- * ```tsx
- * const [value, setValue] = useState("");
- * 
- * <Input
- *   value={value}
- *   onChange={(e) => setValue(e.target.value)}
- *   placeholder="名前を入力"
- * />
- * ```
+ * Inputコンポーネント
  */
 
 export interface InputProps {

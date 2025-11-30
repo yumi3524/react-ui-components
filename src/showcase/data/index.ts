@@ -1,5 +1,5 @@
-import { formComponents } from './form';
-import { displayComponents } from './display';
+import { formComponents } from './components/form';
+import { displayComponents } from './components/display';
 import type { ComponentInfo } from '../types';
 
 export const componentsData: ComponentInfo[] = [
@@ -7,4 +7,4 @@ export const componentsData: ComponentInfo[] = [
   ...displayComponents,
 ];
 
-export { categoriesData } from './categories';
+export { categoriesData } from './components/categories';
